@@ -1,0 +1,94 @@
+.sidebar{
+    display: grid;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: 60px;
+    width: 78px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    z-index: 2;
+}
+
+.home-link,
+.explore-link,
+.subscriptions-link,
+.originals-link,
+.music-link,
+.library-link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-link:hover,
+.explore-link:hover,
+.subscriptions-link:hover,
+.originals-link:hover,
+.music-link:hover,
+.library-link:hover{
+    background-color: rgba(211, 211, 211, 0.575);
+}
+
+.home-link img,
+.explore-link img,
+.subscriptions-link img,
+.originals-link img,
+.music-link img,
+.library-link img{
+    height: 30px;
+    margin-bottom: 8px;
+}
+
+.home-link div,
+.explore-link div,
+.subscriptions-link div,
+.originals-link div,
+.music-link div,
+.library-link div{
+    font-size: 11px;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+        body{
+            padding-bottom: 100px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .sidebar{
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            gap: 10px;
+            top: initial;
+            width: initial;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 10px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 374px) {
+    .music-link,
+    .explore-link{
+        display: none;
+    }
+    
+    .sidebar{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+}
+
+@media (min-width: 375px) and (max-width: 509px) {
+    .music-link{
+        display: none;
+    }
+    
+    .sidebar{
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+}
